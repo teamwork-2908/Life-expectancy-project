@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>HTML Template</title>
+</head>
+<body>
+<center>
+<h1>Life Expectancy prediction<h1>
+<form methods="POST" action="{{url for('predict')}}">
+Year:<input type="text" ,name='b',placeholder="enter the year"></br>
+ Adult Mortality:<input type="text",name='c',placeholder="enter the adult mortality number"></br>
+infant deaths:<input type="text",name='d',placeholder="enter infant deaths number"></br>
+Alcohol:<input type="text",name='e',placeholder="enter the alcohol percentage"></br>
+percentage expenditure<input type="text",name='e',placeholder="enter the percentage of expenditure"></br>
+Hepatitis B<input type="text",name='f,placeholder="enter Hepatitis disease number"></br>
+Measles<input type="text",name='g',placeholder="enter measles disease number"></br>
+BMI<input type="text",name='h',placeholder="enter BMI"></br>
+under-five deaths<input type="text",name='i',placeholder="enter the number of under-five-deaths"></br>
+Polio<input type="text",name='j',placeholder="enter polio percentage"></br>
+Total expenditure<input type="text",name='k',placeholder="enter Total expenditure of a country"></br>
+Diphtheria<input type="text",name='l',placeholder="enter diptheria disease number"></br>
+HIV/AIDS<input type="text",name='m',placeholder="enter Hiv/aids disease number"></br>
+GDP<input type="text",name='n',placeholder="enter gdp"></br>
+Population<input type="text",name='o',placeholder="enter population"></br>
+thinness  1-19 years<input type="text",name='p',placeholder="enter thinnes(1-19(years"></br>
+thinness 5-9 years<input type="text",name='q',placeholder="enter thinness(5-9)years"></br>
+Income composition of resources<input type="text",name='r',placeholder="enter income"></br>
+Schooling<input type="text",name='s',placeholder="enter schooling percentage"></h6></br>
+<input type="submit", value='predict'>
+</center>
+{{output}}
+</body>
+</html>

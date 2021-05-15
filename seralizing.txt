@@ -1,0 +1,22 @@
+                                               we do serializing and unserializing in 2 ways
+1)pickling and unplicking the trained model and use the model according to the neccsessity(we have to import the pickle package)
+Pickle in Python is primarily used in serializing and deserializing a Python object structure. In other words, it's the process of converting a Python object into a byte stream to store it in a file/database, maintain program state across sessions, or transport data over the network.18-Nov-2014
+ FOR PICKING: 
+ import pickle
+with open('lg_pickle','wb') as f:
+     pickle.dump(lg,f)
+    FOR UNPICKING:
+with open('lg_pickle','rb') as f:
+     pickledmodel=pickle.load(f)
+    
+     Prediction :
+pickledmodel.predict([[0,2019,678,440,190.89,71.00,56,345,50.9,78,7,9,67,0.1,590,3000,17,19.3,0.56,1.90]])
+
+2)using joblib(using sklearn package):
+from sklearn.externals import joblib
+joblib.dump(lg,'joblibedmodel')
+
+jm=joblib.load('joblibedmodel')
+  Prediction:
+jm.predict([[0,2019,678,440,190.89,71.00,56,345,50.9,78,7,9,67,0.1,590,3000,17,19.3,0.56,1.90]])
+
